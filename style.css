@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#react{
+    width: 15rem;
+    height: 15rem;
+}
+#exp{
+    width:18rem;
+    height: 18rem;
+}
+#dis-cart{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 15px;
+}
+#off-cart{
+    background-color: white;
+}
+#dis-carttem{
+    width: 20rem;
+    height: 40rem;
+    background-color: black;
+    border-radius: 15px;
+}
+.form-con{
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    height: 100vh;
+}
+.title{
+    text-align: center;
+    color:white;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    font-size: 24px;
+}
+.form-content{
+    padding-left: 9%;
+    padding-right: 9%;
+}
+#form-control1{
+    height: 5rem;
+}
+#form-id{
+    background-color: black;
+}
+#graph{
+    width: auto;
+    height: auto;
+    background-color: rgb(35, 106, 168);
+    z-index: 2;
+    position: absolute;
+    margin-top: -30%;
+}
+.span1{
+    position: relative;
+    font-size: 4vw;
+    color: #383d52;
+    -webkit-text-stroke: 0.3vw  #383d52;
+}
+.span1::before{
+content: attr(data-text);
+position: absolute;
+top:0;
+left:0;
+width: 0;
+height: 100%;
+color: #01fe87;
+-webkit-text-stroke: 0vw #383d52;
+border-right: 2px solid #01fe87;
+overflow: hidden;
+animation: animate 6s linear infinite;
+}
+@keyframes animate{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    #graph{
+        margin-top: -80%;
+        position: absolute;
+    }
+}
+
+.glow{
+    animation: glow 1s ease infinite;
+}
+@keyframes glow{
+    from{
+        color: black;
+    }
+    to{
+        color: white;
+        text-shadow: 0 0 5px #30cdfd,
+                     0 0 25px #30cdfd,
+                     0 0 50px #30cdfd,
+                     0 0 100px #30cdfd;
+    }
+}
+
+.form-control:invalid{
+    border-color:2px solid red;
+    animation: shake 0.5s infinite;
+}
+.form-control:valid{
+    border-color:2px solid green;
+}
+
+@keyframes shake{
+    0%{transform: translateX(4px);}
+    50%{transform: translateX(-4px);}
+    100%{transform: translateX(4px);}
+}
